@@ -33,15 +33,19 @@ include 'db-dischi.php';
         <option>All</option>
     </select>
 
+
     <div class="cds-container container">
+        
+        <?php foreach ($dischi as $disco) { ?>
+            <div class="cd">
+                <img src="<?php echo $disco['poster']; ?>" alt="<?php echo $disco['title']; ?>">
 
+                <h3 class="title"> <?php echo $disco['title']; ?></h3>
+                <span class="author"><?php echo $disco['author']; ?></span>
+                <span class="year"><?php echo $disco['year']; ?></span>
+            </div>
+        <?php } ?>
 
-        <div class="cd">
-            <img src="" alt="da inserire">
-            <h3 class="title"> OK </h3>
-            <span class="author"> OK</span>
-            <span class="year"> OK</span>
-        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
