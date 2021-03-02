@@ -28,15 +28,15 @@
         </header>
         
         
-        <select id="selettore">
-            <option>All</option>
+        <select v-model="genereSelect" id="selettore">
+            <option v-for="tipo in tipi" :value="tipo">{{ tipo }}</option>
         </select>
         
         
         <div class="cds-container container">
         
         
-            <div class="cd" v-for="disco in dischi">
+            <div class="cd" v-for="disco in dischi" v-if="genereSelect == 'All' ||genereSelect == disco.genre">
                 <img :src="disco.poster" alt="disco.title">
         
                 <h3 class="title">
