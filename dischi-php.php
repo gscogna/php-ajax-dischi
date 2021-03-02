@@ -1,5 +1,5 @@
 <?php
-include 'db-dischi.php';
+include 'db.php';
 ?>
 
 <!DOCTYPE html>
